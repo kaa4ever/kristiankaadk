@@ -20,7 +20,7 @@ set('repository', 'git@github.com:kaa4ever/kristiankaadk.git');
 task('build', function() {
   write('Starting to build site');
   cd('/var/www/html');
-  run('composer install');
+  run('drush make site.make -y');
 });
 
 task('drush', function() {
