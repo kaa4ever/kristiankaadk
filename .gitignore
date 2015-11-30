@@ -1,7 +1,24 @@
 # Ignore Drupal
-site/*
-!site/site.make
-!site/themes/kkdk/
+site/.csslintrc
+site/.editorconfig
+site/.eslintignore
+site/.eslintrc
+site/.gitattributes
+site/.htaccess
+site/README.txt
+site/autoload.php
+site/composer.json
+site/composer.lock
+site/core
+site/example.gitignore
+site/index.php
+site/modules
+site/profiles
+site/robots.txt
+site/sites
+site/update.php
+site/vendor
+site/web.config
 
 # Ignore environment files.
 .idea
