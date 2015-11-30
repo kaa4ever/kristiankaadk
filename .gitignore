@@ -19,6 +19,7 @@ site/sites
 site/update.php
 site/vendor
 site/web.config
+site/themes/README.txt
 
 # Ignore environment files.
 .idea
