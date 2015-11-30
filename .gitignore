@@ -1,5 +1,7 @@
 # Ignore Drupal
-
+site/*
+!site/site.make
+!site/themes/kkdk/
 
 # Ignore environment files.
 .idea
