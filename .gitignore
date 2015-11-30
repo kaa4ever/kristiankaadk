@@ -1,0 +1,11 @@
+# Ignore Drupal
+site/*
+!site/site.make
+!site/themes/*
+
+# Ignore environment files.
+.idea
+.DS_Store
+
+site/*
+!site/.gitkeep
