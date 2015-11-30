@@ -6,6 +6,7 @@ site/.eslintrc
 site/.gitattributes
 site/.htaccess
 site/README.txt
+site/LICENSE.txt
 site/autoload.php
 site/composer.json
 site/composer.lock

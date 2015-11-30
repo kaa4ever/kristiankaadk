@@ -3,7 +3,7 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.0.0-beta15"
+projects[drupal][version] = "8.0.0"
 
 ; Modules
 projects[google_analytics][version] = "2.x-dev"
