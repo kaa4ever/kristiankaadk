@@ -10,7 +10,7 @@ db:
     MYSQL_PASSWORD: "password"
 
 php:
-  image: kaa4ever/php-drupal
+  build: .
   container_name: kk_php
   volumes:
     - ./site:/var/www/html
