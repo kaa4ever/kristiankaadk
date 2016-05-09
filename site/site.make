@@ -11,3 +11,7 @@ projects[google_analytics][version] = "2.x-dev"
 projects[syntax_highlighter][download][type] = "git"
 projects[syntax_highlighter][download][url] = "https://github.com/kaa4ever/drupal8-syntax-highlighter.git"
 projects[syntax_highlighter][type] = "module"
+
+; Themes
+projects[drupal8_zymphonies_theme][version] = "1.0"
+projects[drupal8_zymphonies_theme][type] = "theme"
