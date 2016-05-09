@@ -1,32 +1,20 @@
+app:
+  build: .
+  container_name: kristiankaa.site
+  ports:
+    - "82:80"
+  volumes:
+    - ./site:/data/www
+    - ./config/default.conf:/etc/nginx/nginx.d/default.conf
+    - ./config/php.development.ini:/etc/php.ini
+
 db:
   image: mariadb:10.0.22
-  container_name: kk_mariadb
+  container_name: kristiankaa.db
   ports:
-    - "3307:3306"
+    - "3309:3306"
   environment:
     MYSQL_DATABASE: "db_default"
     MYSQL_ROOT_PASSWORD: "root"
     MYSQL_USER: "user"
     MYSQL_PASSWORD: "password"
-
-php:
-  build: .
-  container_name: kk_php
-  volumes:
-    - ./site:/var/www/html
-    - ./config/php-fpm.conf:/usr/local/etc/php-fpm.conf
-  expose:
-    - "9000"
-  links:
-    - db:kk_mariadb
-
-webserver:
-  image: nginx:1.9.7
-  container_name: kk_nginx
-  volumes:
-    - ./config/default.conf:/etc/nginx/conf.d/default.conf
-    - ./site:/var/www/html
-  ports:
-    - "80:80"
-  links:
-    - php:kk_php
