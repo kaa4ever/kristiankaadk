@@ -3,15 +3,13 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.0.0"
+projects[drupal][version] = "8.1.10"
 
 ; Modules
-projects[google_analytics][version] = "2.x-dev"
+projects[backup_migrate][version] = "4.0-alpha1"
+
+projects[google_analytics][version] = "2.1"
 
 projects[syntax_highlighter][download][type] = "git"
 projects[syntax_highlighter][download][url] = "https://github.com/kaa4ever/drupal8-syntax-highlighter.git"
 projects[syntax_highlighter][type] = "module"
-
-; Themes
-projects[drupal8_zymphonies_theme][version] = "1.0"
-projects[drupal8_zymphonies_theme][type] = "theme"
