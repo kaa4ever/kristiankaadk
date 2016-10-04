@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    container_name: kristiankaa.site
+    ports:
+      - "8091:80"
+    volumes:
+      - ./site:/data/www
+      - ./config/default.conf:/etc/nginx/nginx.d/default.conf

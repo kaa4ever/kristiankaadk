@@ -1,20 +1,19 @@
-app:
-  build: .
-  container_name: kristiankaa.site
-  ports:
-    - "82:80"
-  volumes:
-    - ./site:/data/www
-    - ./config/default.conf:/etc/nginx/nginx.d/default.conf
-    - ./config/php.development.ini:/etc/php.ini
-
-db:
-  image: mariadb:10.0.22
-  container_name: kristiankaa.db
-  ports:
-    - "3309:3306"
-  environment:
-    MYSQL_DATABASE: "db_default"
-    MYSQL_ROOT_PASSWORD: "root"
-    MYSQL_USER: "user"
-    MYSQL_PASSWORD: "password"
+version: '2'
+services:
+  app:
+    build: .
+    container_name: kristiankaa.site
+    ports:
+      - "8091:80"
+    volumes:
+      - ./site:/data/www
+      - ./config/default.conf:/etc/nginx/nginx.d/default.conf
+      - ./config/php.development.ini:/etc/php.ini
+  db:
+    image: mariadb:10.0.22
+    container_name: kristiankaa.db
+    environment:
+      MYSQL_DATABASE: "db_default"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
