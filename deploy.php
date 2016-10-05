@@ -21,15 +21,6 @@ task('docker:reboot', function () {
   run('docker-compose -f docker-compose.prod.yml up -d');
 });
 
-//task('deploy:symlink', function () {
-//  cd('{{release_path}}/site/sites/default');
-//  run('ln -s /usr/share/nginx/kristiankaadk/shared/sites/default/settings.php');
-//  run('ln -s /usr/share/nginx/kristiankaadk/shared/sites/default/services.yml');
-//  run('ln -s /usr/share/nginx/kristiankaadk/shared/sites/default/files');
-//  run('rm /usr/share/nginx/kristiankaadk/current');
-//  run('ln -s {{release_path}} /usr/share/nginx/kristiankaadk/current');
-//})->desc('Setting symlinks');
-
 task('drush:make', function() {
   writeln("<info>Drush: Building site</info>");
   run('docker exec kristiankaa.site bash -c "cd /var/www/html && drush make site.make -y"');
@@ -51,5 +42,3 @@ after('deploy:update_code', 'docker:reboot');
 after('deploy:update_code', 'drush:make');
 after('deploy', 'drush:updb');
 after('deploy', 'drush:cache');
-//after('deploy:shared', 'build');
-//after('deploy', 'drush');
