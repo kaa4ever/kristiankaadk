@@ -9,6 +9,11 @@ server('prod', '146.185.128.63', 9999)
 
 set('repository', 'git@github.com:kaa4ever/kristiankaadk.git');
 
+task('deploy:permissions', function() {
+  run('if [ -d {{deploy_path}}/shared ]; then sudo chown -R deploy:deploy {{deploy_path}}/shared; fi');
+  run('if [ -d {{deploy_path}}/releases ]; then sudo chown -R deploy:deploy {{deploy_path}}/releases; fi');
+});
+
 task('docker:reboot', function () {
   cd('{{release_path}}');
   run('docker stop kristiankaa.site || true');
@@ -41,6 +46,7 @@ task('drush:cache', function () {
   run('docker exec kristiankaa.site drush cr --root=/var/www/html');
 });
 
+after('deploy:prepare', 'deploy:permissions');
 after('deploy:update_code', 'docker:reboot');
 after('deploy:update_code', 'drush:make');
 after('deploy', 'drush:updb');
