@@ -1,0 +1,45 @@
+name: KK
+type: profile
+description: 'Installation profile for kristiankaa.dk.'
+version: VERSION
+core: 8.x
+dependencies:
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - taxonomy
+  - dblog
+  - search
+  - toolbar
+  - field_ui
+  - file
+  - views
+  - views_ui
+  - simpletest
+  - big_pipe
+  - inline_form_errors
+  - link
+  - config_translation
+  - content_translation
+  - language
+  - field_collection
+  - text
+themes:
+  - kaatheme
+  - seven

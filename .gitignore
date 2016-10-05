@@ -14,7 +14,7 @@ site/core
 site/example.gitignore
 site/index.php
 site/modules
-site/profiles
+site/profiles/README.txt
 site/themes
 site/robots.txt
 site/sites
