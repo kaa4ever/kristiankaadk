@@ -12,6 +12,7 @@ set('repository', 'git@github.com:kaa4ever/kristiankaadk.git');
 task('docker:reboot', function () {
   cd('{{release_path}}');
   run('docker stop kristiankaa.site || true');
+  run('docker rm kristiankaa.site || true');
   run('docker-compose -f docker-compose.prod.yml up -d');
 });
 
@@ -26,7 +27,7 @@ task('docker:reboot', function () {
 
 task('drush:make', function() {
   writeln("<info>Drush: Building site</info>");
-  run('docker exec kristiankaa.site drush make site.make -y --root=/var/www/html');
+  run('docker exec kristiankaa.site bash -c "cd /var/www/html && drush make site.make -y"');
 });
 
 

@@ -6,9 +6,9 @@ services:
     ports:
       - "8091:80"
     volumes:
-      - ./site:/data/www
-      - ./config/default.conf:/etc/nginx/nginx.d/default.conf
+      - ./site:/var/www/html
       - ./config/php.development.ini:/etc/php.ini
+
   db:
     image: mariadb:10.0.22
     container_name: kristiankaa.db
