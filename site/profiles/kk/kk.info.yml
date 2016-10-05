@@ -31,7 +31,6 @@ dependencies:
   - file
   - views
   - views_ui
-  - simpletest
   - big_pipe
   - inline_form_errors
   - link
@@ -39,6 +38,10 @@ dependencies:
   - content_translation
   - language
   - text
+
+  - backup_migrate
+  - google_analytics
+  - syntax_highlighter
 themes:
   - kaatheme
   - seven
