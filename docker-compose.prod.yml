@@ -6,7 +6,6 @@ services:
     ports:
       - "8091:80"
     volumes:
-      - ./site:/var/www/html
       - ./../../shared/sites/default/files:/var/www/html/sites/default/files
       - ./../../shared/sites/default/settings.php:/var/www/html/sites/default/settings.php
       - ./../../shared/sites/default/services.yml:/var/www/html/sites/default/services.yml
