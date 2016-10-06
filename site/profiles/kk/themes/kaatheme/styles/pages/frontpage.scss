@@ -1,31 +1,3 @@
-//.row-frontpage {
-//  clear: both;
-//  margin-bottom: 30px;
-//  position: relative;
-//  z-index: -1;
-//  img {
-//    float: left;
-//    margin-bottom: 30px;
-//  }
-//  h3 {
-//    margin: 0 0 0 110px;
-//  }
-//  .authored-on {
-//    color: $gray-dark;
-//    font-size: .9rem;
-//    margin: -5px 0 0 110px;
-//  }
-//  a {
-//    text-indent: 9999px;
-//    overflow: hidden;
-//    position: absolute;
-//    top: 0;
-//    left: 0;
-//    width: 100%;
-//    height: 100%;
-//  }
-//}
-
 .view-frontpage .columns {
   background: $gray-lightest;
   border: 10px solid white;
@@ -42,6 +14,9 @@
 
   h3 {
     margin: 0;
+    a {
+      color: black;
+    }
   }
 
   .authored-on {
