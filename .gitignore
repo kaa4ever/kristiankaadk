@@ -25,3 +25,4 @@ site/web.config
 # Ignore environment files.
 .idea
 .DS_Store
+node_modules
