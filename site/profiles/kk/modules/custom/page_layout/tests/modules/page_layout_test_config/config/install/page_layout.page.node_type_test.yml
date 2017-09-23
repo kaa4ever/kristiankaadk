@@ -1,0 +1,38 @@
+id: node_type_test
+title: 'Node Type Test'
+path: /node/%
+variants:
+  -
+    id: 57f35b0b07a71
+    admin_title: Page
+    title: 'Node Type Test - Page'
+    layout: page_layout.one_column
+    conditions:
+      -
+        id: 57f35b2187e50
+        plugin: node_type
+        configuration:
+          bundles:
+            page: page
+            article: 0
+          context_mapping:
+            node: '@node.node_route_context:node'
+          negate: 0
+    blocks: {  }
+  -
+    id: 57f35b2e1fc31
+    admin_title: Article
+    title: 'Node Type Test - Article'
+    layout: page_layout.one_column
+    conditions:
+      -
+        id: 57f35b375f3ff
+        plugin: node_type
+        configuration:
+          bundles:
+            article: article
+            page: 0
+          context_mapping:
+            node: '@node.node_route_context:node'
+          negate: 0
+    blocks: {  }

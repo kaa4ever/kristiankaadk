@@ -1,0 +1,8 @@
+name: 'Page Layout test configuration'
+type: module
+description: 'Support module for Page Layout test'
+package: Testing
+core: '8.x'
+dependencies:
+  - page_layout:page_layout
+  - drupal:language

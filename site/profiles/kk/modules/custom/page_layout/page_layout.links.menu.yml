@@ -1,0 +1,6 @@
+page_layout.admin_page_list:
+  title: 'Page layout'
+  parent: system.admin_structure
+  description: 'Configure existing or setup new pages with custom layout'
+  route_name: page_layout.admin_page_list
+  weight: -100

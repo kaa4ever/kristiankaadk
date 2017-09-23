@@ -1,0 +1,9 @@
+admin:
+  version: 1.x
+  js:
+    page-layout.admin.js: {}
+  css:
+    base:
+      page-layout.admin.css: {}
+  dependencies:
+    - core/jquery

@@ -3,19 +3,11 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.1.10"
+projects[drupal][version] = "8.3.7"
 
 ; Modules
-projects[backup_migrate][version] = "4.0-alpha1"
+projects[backup_migrate][version] = "4.0-alpha2"
 
 projects[google_analytics][version] = "2.1"
 
-projects[syntax_highlighter][download][type] = "git"
-projects[syntax_highlighter][download][url] = "https://github.com/kaa4ever/drupal8-syntax-highlighter.git"
-projects[syntax_highlighter][type] = "module"
-
-projects[page_layout][download][type] = "git"
-projects[page_layout][download][url] = "https://github.com/kaa4ever/page_layout.git"
-projects[page_layout][type] = "module"
-
-projects[layout_plugin][version] = "1.0-alpha22"
+projects[layout_plugin][version] = "1.0-alpha23"

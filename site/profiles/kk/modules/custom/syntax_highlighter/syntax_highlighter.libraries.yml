@@ -1,0 +1,34 @@
+highlight:
+  version: 1.x
+  css:
+    theme:
+      styles/shCoreDefault.css: {}
+  js:
+    js/shCore.js: {}
+    js/shLegacy.js: {}
+    js/brushes/shBrushAppleScript.js: {}
+    js/brushes/shBrushAS3.js: {}
+    js/brushes/shBrushBash.js: {}
+    js/brushes/shBrushColdFusion.js: {}
+    js/brushes/shBrushCpp.js: {}
+    js/brushes/shBrushCSharp.js: {}
+    js/brushes/shBrushCss.js: {}
+    js/brushes/shBrushDelphi.js: {}
+    js/brushes/shBrushDiff.js: {}
+    js/brushes/shBrushErlang.js: {}
+    js/brushes/shBrushGroovy.js: {}
+    js/brushes/shBrushJava.js: {}
+    js/brushes/shBrushJavaFX.js: {}
+    js/brushes/shBrushJScript.js: {}
+    js/brushes/shBrushPerl.js: {}
+    js/brushes/shBrushPhp.js: {}
+    js/brushes/shBrushPlain.js: {}
+    js/brushes/shBrushPowerShell.js: {}
+    js/brushes/shBrushPython.js: {}
+    js/brushes/shBrushRuby.js: {}
+    js/brushes/shBrushSass.js: {}
+    js/brushes/shBrushScala.js: {}
+    js/brushes/shBrushSql.js: {}
+    js/brushes/shBrushVb.js: {}
+    js/brushes/shBrushXml.js: {}
+    js/init.js: {}
