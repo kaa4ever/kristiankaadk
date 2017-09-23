@@ -3,11 +3,11 @@ core = 8.x
 api = 2
 
 ; Core
-projects[drupal][version] = "8.1.10"
+projects[drupal][version] = "8.3.7"
 
 ; Modules
-projects[backup_migrate][version] = "4.0-alpha1"
+projects[backup_migrate][version] = "4.0-alpha2"
 
 projects[google_analytics][version] = "2.1"
 
-projects[layout_plugin][version] = "1.0-alpha22"
+projects[layout_plugin][version] = "1.0-alpha23"
