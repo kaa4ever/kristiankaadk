@@ -1,0 +1,24 @@
+id: articles
+title: Articles
+path: /articles/%
+variants:
+  -
+    id: 57e98d0c9eafc
+    title: Articles
+    layout: page_layout.one_column
+    conditions: {  }
+    blocks: {  }
+    admin_title: Default
+  -
+    id: 57eb759aa4e6c
+    title: 'News articles'
+    layout: page_layout.one_column
+    conditions:
+      -
+        id: 57ec1d4ce158b
+        plugin: request_path
+        configuration:
+          pages: /articles/news
+          negate: 0
+    blocks: {  }
+    admin_title: News

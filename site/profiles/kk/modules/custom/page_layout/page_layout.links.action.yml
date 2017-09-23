@@ -1,0 +1,13 @@
+page_layout.admin_page_add:
+  route_name: page_layout.admin_page_add
+  title: 'Add new Page'
+  class: '\Drupal\page_layout\Plugin\Menu\LocalAction\LoadModalLocalAction'
+  appears_on:
+    - page_layout.admin_page_list
+
+page_layout.admin_variants_add:
+  route_name: page_layout.admin_variants_add
+  title: 'Add variant'
+  class: '\Drupal\page_layout\Plugin\Menu\LocalAction\LoadModalLocalAction'
+  appears_on:
+    - page_layout.admin_variants_edit

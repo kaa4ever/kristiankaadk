@@ -1,0 +1,21 @@
+services:
+    page_layout.route_provider:
+        class: Drupal\page_layout\Routing\RouteProvider
+        arguments:
+            - '@page_layout.page_manager'
+            - '@database'
+
+    page_layout.page_manager:
+        class: Drupal\page_layout\PageManager
+        arguments:
+            - '@config.factory'
+            - '@plugin.manager.condition'
+            - '@context.repository'
+            - '@context.handler'
+
+    page_layout.variant_route_filter:
+        class: Drupal\page_layout\Routing\VariantRouteFilter
+        arguments:
+            - '@page_layout.page_manager'
+        tags:
+            - { name: non_lazy_route_filter, priority: -1024 }

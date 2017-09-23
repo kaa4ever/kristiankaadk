@@ -1,0 +1,15 @@
+.page-layout-selector .form-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.page-layout-selector .form-item img {
+  display: block;
+  margin: 0 auto;
+}
+
+.tabs.secondary .use-ajax,
+.tabs.secondary .ajax-progress {
+  display: inline-block;
+}

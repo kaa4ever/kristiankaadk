@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ */
+function page_layout_menu_local_tasks_alter(&$data, $route_name) {
+  if ($route_name === 'page_layout.admin_variants_edit') {
+    /** @var \Drupal\page_layout\PageManagerInterface $pageManager */
+    $pageManager = \Drupal::service('page_layout.page_manager');
+
+    /** @var \Drupal\Core\Routing\CurrentRouteMatch $currentRouteMatch */
+    $currentRouteMatch = \Drupal::service('current_route_match');
+
+    $page_id = $currentRouteMatch->getParameter('page_id');
+    $variant_id = $currentRouteMatch->getParameter('variant_id');
+    $page = $pageManager->getPage($page_id);
+
+    foreach ($page['variants'] as $key => $variant) {
+      $data['tabs'][1]["page_layout.variant.{$variant['id']}"] = [
+        '#theme' => 'menu_local_task',
+        '#active' => !$variant_id && $key === 0 || $variant_id && $variant_id === $variant['id'],
+        '#link' => [
+          'title' => t($variant['admin_title']),
+          'url' => Url::fromRoute('page_layout.admin_variants_edit', [
+            'page_id' => $page['id'],
+            'variant_id' => $variant['id'],
+          ], [
+            'fragment' => 'edit-content',
+          ]),
+        ],
+      ];
+    }
+  }
+}
