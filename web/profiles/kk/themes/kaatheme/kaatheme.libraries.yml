@@ -1,0 +1,9 @@
+global:
+  version: 1.x
+  css:
+    theme:
+      https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css: { type: external, minified: true }
+      https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation-flex.min.css: { type: external, minified: true }
+      styles/styles.min.css: {}
+  js:
+    scripts/scripts.min.js: {}

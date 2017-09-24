@@ -1,0 +1,4 @@
+page_layout.admin_variants_edit:
+  title: 'Default'
+  route_name: page_layout.admin_variants_edit
+  base_route: page_layout.admin_variants_edit

@@ -1,0 +1,17 @@
+article footer {
+  color: $gray-dark;
+  font-size: .9rem;
+  margin-bottom: 20px;
+}
+
+article h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+article h2:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+article img {
+  margin-bottom: 20px;
+}

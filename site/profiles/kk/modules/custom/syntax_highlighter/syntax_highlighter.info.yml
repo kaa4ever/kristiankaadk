@@ -1,9 +1,0 @@
-name: Syntax Highlighter
-type: module
-description: 'Integrates Alex Gorbatchevs Syntax highlighter into CKEditor.'
-package: Custom
-core: '8.x'
-dependencies:
-  - ckeditor
-libraries:
-  - syntax_highlighter/highlight

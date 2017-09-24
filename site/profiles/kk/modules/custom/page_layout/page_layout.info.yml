@@ -1,9 +1,0 @@
-name: 'Page Layout'
-type: module
-description: 'Build layout for custom pages and entities'
-package: Layout
-core: 8.x
-dependencies:
- - drupal:block
- - layout_plugin:layout_plugin
-configure: page_layout.admin_page_list
