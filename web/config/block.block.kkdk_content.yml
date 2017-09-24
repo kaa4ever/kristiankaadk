@@ -1,0 +1,20 @@
+uuid: 75069ac5-5874-45e2-b41a-2685bb58bc0e
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kkdk
+id: kkdk_content
+theme: kkdk
+region: content
+weight: -3
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Primært sideindhold'
+  provider: system
+  label_display: '0'
+visibility: {  }

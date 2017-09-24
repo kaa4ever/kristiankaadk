@@ -1,0 +1,20 @@
+uuid: a9603319-56de-4356-a500-c33656bf3b7c
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_zymphonies_theme
+id: drupal8_zymphonies_theme_content
+theme: drupal8_zymphonies_theme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

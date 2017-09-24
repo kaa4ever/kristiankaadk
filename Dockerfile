@@ -33,7 +33,7 @@ RUN apt-get install curl -y
 # Install supervior
 RUN apt-get install supervisor -y
 
-COPY ./site /var/www/html
+COPY ./ /var/www/html
 COPY ./config/nginx.conf /etc/nginx/sites-available/default
 COPY ./config/php.production.ini /etc/php/7.1/fpm/php.ini
 COPY ./config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf

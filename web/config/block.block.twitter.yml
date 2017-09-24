@@ -1,0 +1,33 @@
+uuid: 8ab24b3c-cffa-41d1-b403-3dca9b33de70
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:738c577e-d951-4744-b900-d8b1b223e012'
+  module:
+    - block_content
+    - node
+  theme:
+    - drupal8_zymphonies_theme
+id: twitter
+theme: drupal8_zymphonies_theme
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:738c577e-d951-4744-b900-d8b1b223e012'
+settings:
+  id: 'block_content:738c577e-d951-4744-b900-d8b1b223e012'
+  label: Twitter
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
