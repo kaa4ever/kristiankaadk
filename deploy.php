@@ -43,7 +43,7 @@ task('drush:config', function () {
 
 task('drush:cache', function () {
   writeln("<info>Drush: Rebuilding cache</info>");
-  run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush cr --root=/var/www/html"');
+  run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush cr --root=/var/www/html/web"');
 });
 
 after('deploy:prepare', 'deploy:permissions');
