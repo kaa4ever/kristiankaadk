@@ -1,7 +1,7 @@
 <?php
 require 'recipe/drupal8.php';
 
-server('prod', '146.185.128.63', 9999)
+server('prod', '188.166.130.40', 9999)
 ->user('deploy')
 ->identityFile()
 ->stage('production')

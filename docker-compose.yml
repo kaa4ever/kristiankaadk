@@ -6,8 +6,8 @@ services:
     ports:
       - "8091:80"
     volumes:
-      - ./site:/var/www/html
-      - ./config/php.development.ini:/etc/php.ini
+      - ./:/var/www/html
+      - ./config/php.development.ini:/etc/php/7.1/fpm/php.ini
 
   db:
     image: mariadb:10.0.22

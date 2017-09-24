@@ -1,0 +1,10 @@
+uuid: c933446c-10b6-4452-ab3d-619dfac44444
+langcode: da
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.full
+label: 'Taxonomy term page'
+targetEntityType: taxonomy_term
+cache: true

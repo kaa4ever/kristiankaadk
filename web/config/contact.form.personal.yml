@@ -1,0 +1,11 @@
+uuid: a18e72e9-ef4d-42d7-be5e-94c6db6b4cad
+langcode: da
+status: true
+dependencies: {  }
+id: personal
+label: 'Personlig kontaktformular'
+recipients: {  }
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,20 @@
+uuid: 1e8b22d6-979b-43be-9300-a44c9fff95a1
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kkdk
+id: kkdk_messages
+theme: kkdk
+region: highlighted
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 58504517-d2b0-4078-bf00-f9afd8b1a9ee
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - kkdk
+id: userlogin
+theme: kkdk
+region: sidebar_first
+weight: -4
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: '0'
+visibility: {  }

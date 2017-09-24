@@ -1,0 +1,17 @@
+uuid: e377cc0f-caa0-4126-9b5a-9049a0a574b3
+langcode: da
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Artikel
+type: article
+description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true
