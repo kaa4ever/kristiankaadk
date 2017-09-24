@@ -21,24 +21,34 @@ task('docker:reboot', function () {
   run('docker-compose -f docker-compose.prod.yml up -d');
 });
 
-task('drush:make', function() {
-  writeln("<info>Drush: Building site</info>");
-  run('docker exec kristiankaa.site bash -c "cd /var/www/html && drush make site.make -y"');
+task('drush:composer', function() {
+  writeln("<info>Drush: Installing dependencies</info>");
+  run('docker exec kristiankaa.site bash -c "cd /var/www/html && composer install"');
 });
-
 
 task('drush:updb', function () {
   writeln("<info>Drush: Updating database</info>");
-  run('docker exec kristiankaa.site drush updb -y --root=/var/www/html');
+  run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush updb -y --root=/var/www/html/web"');
+});
+
+task('drush:updb', function () {
+    writeln("<info>Drush: Updating database</info>");
+    run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush updb -y --root=/var/www/html/web"');
+});
+
+task('drush:config', function () {
+    writeln("<info>Drush: Synchronizing configuration</info>");
+    run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush cim --source=./config"');
 });
 
 task('drush:cache', function () {
   writeln("<info>Drush: Rebuilding cache</info>");
-  run('docker exec kristiankaa.site drush cr --root=/var/www/html');
+  run('docker exec kristiankaa.site bash -c "cd /var/www/html/web && ../vendor/drush/drush/drush cr --root=/var/www/html"');
 });
 
 after('deploy:prepare', 'deploy:permissions');
 after('deploy:update_code', 'docker:reboot');
-after('deploy:update_code', 'drush:make');
+after('deploy:update_code', 'drush:composer');
 after('deploy', 'drush:updb');
+after('deploy', 'drush:config');
 after('deploy', 'drush:cache');
