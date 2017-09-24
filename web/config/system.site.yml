@@ -1,0 +1,13 @@
+uuid: 484247d5-67d2-49f4-9105-5d0aafbbc4b6
+name: KristianKaa
+mail: kaakristian@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: da
+default_langcode: en
+mail_notification: ''

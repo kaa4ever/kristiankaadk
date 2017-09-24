@@ -1,0 +1,20 @@
+uuid: b23e27b7-1b62-42f8-8362-98d76d1b539f
+langcode: da
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kkdk
+id: kkdk_breadcrumbs
+theme: kkdk
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Brødkrummer
+  provider: system
+  label_display: '0'
+visibility: {  }

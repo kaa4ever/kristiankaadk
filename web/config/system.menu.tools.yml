@@ -1,0 +1,8 @@
+uuid: 86594da8-f72a-454e-a10b-11e17f0639ee
+langcode: da
+status: true
+dependencies: {  }
+id: tools
+label: Værktøjer
+description: 'Contains links for site visitors. Some modules add their links here.'
+locked: true
