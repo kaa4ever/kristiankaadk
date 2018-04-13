@@ -1,9 +1,0 @@
-kaa_theme.two_column:
-  label: KaaTheme: Two column
-  template: layouts/two-column
-  icon: layouts/two-column.png
-  regions:
-    left:
-      label: Left content
-    right:
-      label: Right content

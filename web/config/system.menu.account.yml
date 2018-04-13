@@ -1,8 +1,0 @@
-uuid: 9044e473-b9f9-469a-931f-31631bd9e38b
-langcode: da
-status: true
-dependencies: {  }
-id: account
-label: 'User account menu'
-description: 'Links related to the user account.'
-locked: true
