@@ -1,6 +1,0 @@
-{
-  "name": "drupal/syntax_highlighter",
-  "description": "Integrates Alex Gorbatchevs Syntax highlighter into CKEditor.",
-  "type": "drupal-module",
-  "license": "MIT"
-}
