@@ -7,11 +7,11 @@ layout: '../layouts/Page.astro'
 ### The technical stuff 👨🏼‍💻
 This page was built with the [Astro framework](https://astro.build/), which I highly recommend for content-heavy pages, like this.
 
-It hosted on [Netlify](https://www.netlify.com/), which is a free hosting provider (for personal projects like this), with many cool features, such deployment from Github.
+It's hosted on [Netlify](https://www.netlify.com/), which is a free hosting provider (for personal projects like this), with many cool features, such as deployment from Github.
 
 
 ### My story 🍀
-TLDR; You can find my Curriculum Vitae right here.
+TLDR; You can find my Curriculum Vitae right [here](/cv.pdf).
 
 __Also, if you want to build a professionel looking CV, 100% for free, check out my Curriculum Vitae generator project right [here](/project/curriculum-vitae-generator). You'll also receive some free advice of what to include in your CV.__
 
