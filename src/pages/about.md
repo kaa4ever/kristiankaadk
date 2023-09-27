@@ -13,7 +13,7 @@ It's hosted on [Netlify](https://www.netlify.com/), which is a free hosting prov
 ### My story 🍀
 TLDR; You can find my Curriculum Vitae right [here](/cv.pdf).
 
-__Also, if you want to build a professionel looking CV, 100% for free, check out my Curriculum Vitae generator project right [here](/project/curriculum-vitae-generator). You'll also receive some free advice of what to include in your CV.__
+> Also, if you want to build a professionel looking CV, 100% for free, check out my Curriculum Vitae generator project right [here](/project/curriculum-vitae-generator). You'll also receive some free advice of what to include in your CV.
 
 Now to the stuff that you actually got here for!
 
