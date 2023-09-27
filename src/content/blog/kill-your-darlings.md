@@ -1,7 +1,7 @@
 ---
 title: 'Kill your darlings'
 description: 'A short story about saying goodbye'
-date: 'Jul 08 2022'
+pubDate: 'Jul 08 2022'
 image: '/blog-placeholder-3.jpg'
 ---
 

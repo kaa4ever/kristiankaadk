@@ -8,7 +8,7 @@ interface Props {
 		data: {
 			readonly image: string;
 			readonly title: string;
-			readonly date: Date
+			readonly pubDate: Date
 		}
 	}>;
 }
@@ -85,7 +85,7 @@ const { items } = Astro.props;
 					<div class="image" style={{ backgroundImage: `url(${item.data.image})` }}></div>
 					<h4 class="title">{item.data.title}</h4>
 					<p class="date">
-						<FormattedDate date={item.data.date} />
+						<FormattedDate date={item.data.pubDate} />
 					</p>
 				</a>
 			</li>

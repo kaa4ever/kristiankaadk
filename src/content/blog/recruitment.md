@@ -1,7 +1,7 @@
 ---
 title: 'Recruitment'
 description: 'How not to recruit'
-date: 'Jul 08 2022'
+pubDate: 'Jul 08 2022'
 image: '/blog-placeholder-3.jpg'
 ---
 

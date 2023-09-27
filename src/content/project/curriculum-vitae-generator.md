@@ -1,7 +1,7 @@
 ---
 title: 'CV Generator'
 description: 'Lorem ipsum dolor sit amet'
-date: 'Jul 08 2022'
+pubDate: 'Jul 08 2022'
 image: '/cv.png'
 ---
 
