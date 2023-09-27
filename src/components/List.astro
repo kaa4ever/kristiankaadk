@@ -1,0 +1,94 @@
+---
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	items: Array<{
+		readonly slug: string;
+		readonly collection: string;
+		data: {
+			readonly image: string;
+			readonly title: string;
+			readonly date: Date
+		}
+	}>;
+}
+
+
+const { items } = Astro.props;
+---
+
+<style>
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	ul li {
+		width: calc(50% - 1rem);
+	}
+	ul li * {
+		text-decoration: none;
+		transition: 0.2s ease;
+	}
+	ul li a {
+		display: block;
+	}
+	.title {
+		margin: 0;
+		color: rgb(var(--black));
+		line-height: 1;
+	}
+	.date {
+		margin: 0;
+		color: rgb(var(--gray));
+	}
+	.image {
+		width: 100%;
+		height: 150px;
+		background-position: center center;
+		background-size: cover;
+		margin-bottom: 0.5rem;
+		border-radius: 12px;
+	}
+	.image:hover {
+		box-shadow: var(--box-shadow);
+	}
+	ul li a:hover h4,
+	ul li a:hover .date {
+		color: rgb(var(--accent));
+	}
+	@media (max-width: 720px) {
+		ul {
+			gap: 0.5em;
+		}
+		ul li {
+			width: 100%;
+			text-align: center;
+		}
+		ul li:first-child {
+			margin-bottom: 0;
+		}
+		ul li:first-child .title {
+			font-size: 1.563em;
+		}
+	}
+</style>
+
+<ul>
+	{
+		items.map((item) => (
+			<li>
+				<a href={`/${item.collection}/${item.slug}/`}>
+					<div class="image" style={{ backgroundImage: `url(${item.data.image})` }}></div>
+					<h4 class="title">{item.data.title}</h4>
+					<p class="date">
+						<FormattedDate date={item.data.date} />
+					</p>
+				</a>
+			</li>
+		))
+	}
+</ul>
