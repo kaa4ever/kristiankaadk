@@ -11,11 +11,11 @@ It's hosted on [Netlify](https://www.netlify.com/), which is a free hosting prov
 
 
 ### My story 🍀
-TLDR; You can find my Curriculum Vitae right [here](/cv.pdf).
+TLDR; I have 25 years experience in Software Development. You can find my Curriculum Vitae right [here](/cv.pdf).
 
 Also, if you want to build a professionel looking CV, 100% for free, check out my Curriculum Vitae generator project right [here](/project/curriculum-vitae-generator). You'll also receive some free advice of what to include in your CV.
 
-#### The introduction to computers 👨🏼‍💻
+#### My introduction to computers 👨🏼‍💻
 The first computer in my family's house was not much more than a glorified typewriter. It could probably do a lot more, but since I was too young to experiment with it (and also not allowed), my family really only used it for text editing. Nonetheless, I was intrigued, and I did create my first, very simple maze-finding game on it. Needless to say, a decent amount of fantasy was required to enjoy it, but a game it was!
 
 Growing up as a tech-interested kid in the 90s brought about endless possibilities. My first introduction to the World Wide Web was through a computer at the school's library. I was intrigued. In the beginning, accessing the Internet was only possible at the libraries meaning my friends and I would spend hours and hours at the library (not reading books, unfortunately). Later on, we moved to the Internet Cafes that popped up everywhere, and although that had a price tag, I still spent as much time as possible playing games like Diablo 1 and Delta Force.
@@ -41,7 +41,7 @@ We collected more than a thousand lyrics and started a bulletin board that at on
 __DobbeltDate.dk__  
 Living as singles in Aarhus, a good friend and I thought that the world needed better and more relaxed dating. Instead of going on dates, that sometimes turn out to be cringy affairs, it would be way more nice to always have your favorite wingman at your side and just meet people in a relaxed atmosphere. We succeeded in getting funding (not a lot, but enough to get us going), building and launching the product, and hosting a launch party at Zenza in Aarhus. But that was about it. Our go-to-market strategy failed (probably because we didn't have any), and I learned that; timing is everything, and building the product is only 1/10 the work.
 
-__Sikkerarv.dk__
+__Sikkerarv.dk__  
 Sikkerarv.dk evolved into TestaViva, which at the time of writing is a company with 50+ employees and a 50 million turnover. It started as a dream of disrupting the regular lawyer business, by making it easy, accessible, and cheap to create legal documents online. The lawyers in the established industry just grab standardized paradigms from a backlog of paragraphs when writing your legal document anyways, so why not make a decent web-interface and have people doing it themselves? We did that, as the first in Denmark, and yeah, the rest is history.
 
 #### Professional career

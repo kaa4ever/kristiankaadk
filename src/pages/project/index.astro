@@ -1,0 +1,15 @@
+---
+interface Props {
+  post: Array<any>;
+}
+
+import { getCollection } from 'astro:content';
+
+import ContentIndex from '../../components/ContentIndex.astro';
+
+const posts = (await getCollection('project')).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<ContentIndex type="project" posts={posts} />
