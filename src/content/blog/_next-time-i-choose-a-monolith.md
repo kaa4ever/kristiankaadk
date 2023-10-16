@@ -1,6 +1,6 @@
 ---
 title: 'Next time, I choose a monolith'
-description: 'Why running a monolith is almost always a good idea for you 🫵🏼'
+description: ''
 pubDate: 'Oct 10 2023'
 image: '/blog-placeholder-3.jpg'
 

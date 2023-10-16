@@ -2,15 +2,13 @@
 layout: '../layouts/Page.astro'
 ---
 
-# About
- 
-### The technical stuff 👨🏼‍💻
+## About this page 👨🏼‍💻
 This page was built with the [Astro framework](https://astro.build/), which I highly recommend for content-heavy pages, like this.
 
 It's hosted on [Netlify](https://www.netlify.com/), which is a free hosting provider (for personal projects like this), with many cool features, such as deployment from Github.
 
 
-### My story 🍀
+## About me 🍀
 TLDR; I have 25 years experience in Software Development. You can find my Curriculum Vitae right [here](/cv.pdf).
 
 Also, if you want to build a professionel looking CV, 100% for free, check out my Curriculum Vitae generator project right [here](/project/curriculum-vitae-generator). You'll also receive some free advice of what to include in your CV.
