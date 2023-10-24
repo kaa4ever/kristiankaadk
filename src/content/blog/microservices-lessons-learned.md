@@ -13,9 +13,19 @@ This article will discuss the following aspects:
 
 - [Why did we move to microservices](#why-did-we-move-to-microservices)
 - [Things I liked about microservices](#things-i-liked-about-microservices)
+  - [Recruitment](#recruitment)
+  - [Software engineer responsibility and progression](#software-engineer-responsibility-and-progression)
 - [Things I thought we would get, but that we didn’t get](#things-i-thought-we-would-get-but-that-we-didnt-get)
+  - [Staying up to date with the latest security updates](#staying-up-to-date-with-the-latest-security-updates)
+  - [Less complex code](#less-complex-code)
 - [Things I thought we would like, but that we really didn’t need](#things-i-thought-we-would-like-but-that-we-really–didnt-need)
+  - [Service scalability](#service-scalability)
+  - [Easy separation of code ownership](#easy-separation-of-code-ownership)
 - [Challenges, downsides, and straight-up problems we faced](#challenges-downsides-and-straight-up-problems-we-faced)
+  - [Integrations tests - LOL](#integrations-tests-lol)
+  - [Valuable time wasted on DevOps](#valuable-time-wasted-on-devops)
+  - [Working on multi-service features and the configuration hell](#working-on-multi-service-features-and-the-configuration-hell)
+  - [Maintaining boilerplate code](#maintaining-boilerplate-code)
 
 Let's go :)
 
