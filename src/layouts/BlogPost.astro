@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, image } = Astro.props;
+const { title, description, pubDate, updatedDate, image, readingTime } = Astro.props;
 ---
 
 <html lang="en">
@@ -78,6 +78,8 @@ const { title, description, pubDate, updatedDate, image } = Astro.props;
 							}
 						</div>
 						<h1>{title}</h1>
+						<div class="date">Expected reading time: {readingTime}</div>
+						<br />
 						<hr />
 					</div>
 					<slot />

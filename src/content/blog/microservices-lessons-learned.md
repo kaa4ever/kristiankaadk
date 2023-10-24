@@ -3,7 +3,7 @@ title: 'Microservices, lessons learned'
 description: 'A summary of working with microservices for five years'
 pubDate: 'Oct 22 2023'
 image: '/images/blog/microservices-leassons-learned.jpg'
-
+readingTime: '15 min'
 ---
 A few weeks back, I read Andrei Taranchenkos article _Death by a thousand microservices_ and Justin Etheredges’ _Gasp! You Might Not Need Microservices_, which are both excellent articles. I have been wanting to write this article for a while now, and after reading those two I decided it was finally time.
 
@@ -30,7 +30,8 @@ This article will discuss the following aspects:
 Let's go :)
 
 ### Why did we move to microservices
-At TestaViva we were not flush with money, and we didn’t board the microservice hype train just because of that hype nor because anyone telling us we should. I made that decision because I wrongfully believed it would solve some real-life problems. Microservices seemed to bring all the solutions, with a minimum of downsides. When reading the articles above, especially Etheredges, it seems like a classic example of wanting to move fast but ending up just as slow, or maybe even slow, than before.  
+At TestaViva we were not flush with money, and we didn’t board the microservice hype train just because of that hype nor because anyone telling us we should. I made that decision because I wrongfully believed it would solve some real-life problems. Microservices seemed to bring all the solutions, with a minimum of downsides. When reading the articles above, especially Etheredges, it seems like a classic example of wanting to move fast but ending up moving just as slow, or maybe even slower, than before.
+
 The problems we faced were:
 
 - Slow-running test suite.
@@ -60,7 +61,7 @@ Furthermore, branding TestaViva as working with microservices also added value. 
 
 Being a start-up often makes it difficult to compete with high salaries, so you need to attract and motivate talent by other means. There are many ways to achieve this, but giving engineers responsibility and enabling them to try out new technologies will often work towards that.
 
-Microservices make it very easy to do both since you often find yourself rolling new services, which brings opportunities to try new frameworks (depending on your developer strategy of course). I’ve literally had developers telling me that they ___loved___ their current tasks since they where building new services from scratch and having a big impact on the layout and architecture of that new service.
+Microservices make it very easy to do both since you often find yourself rolling new services, which brings opportunities to try new frameworks (depending on your developer strategy of course). I’ve literally had more than a few developers telling me that they ___loved___ their work due to them building new services from scratch and having a big impact on the layout and architecture of that new service.
 
 ### Things I thought we would get, but that we didn’t get.
 
@@ -91,11 +92,11 @@ Spending more time on thinking it through, would probably have surfaced these fi
 #### Service scalability
 
 _Don’t solve problems you don’t have._  
-Yes, we could scale independent parts of our platform, but not once in my five years with microservice did we have to do that.
+Yes, we could scale independent parts of our platform, but not once in my five years with microservices did we have to do that.
 
-In TestaViva's case, we did have one relevant use case. We had a partner who inside a WebView in their native app integrated a small, encapsulated part of TestaViva. Originally, we had built that feature in the monolith, meaning it would boot a lot of unnecessary stuff. 
+In TestaViva's case, we did have one relevant use case. We had a partner who inside a WebView in their native app integrated a small, encapsulated part of TestaViva. Originally, we had built that feature in the monolith, meaning it would have to boot a lot of unnecessary stuff. 
 
-Moving to microservices, we decided to put that part into its own microservice. This did decrease the time to first paint from around 1200ms to around 600ms, making the overall feel of the implementation much better and more respondent. But running a monolith doesn’t equal not separating logic and concerns by running multiple services.
+Moving to microservices, we decided to put that feature into its own microservice. This did decrease the time to first paint from around 1200ms to 600ms, making the overall feel of the implementation more respondent and a lot better in general. But running a monolith do not equal not separating logic and concerns by running multiple services.
 
 The next time I’m CTO for any product, we will keep our monolith, but still roll separate services, when use-cases like this arises.
 
@@ -107,7 +108,7 @@ You do gain quality and velocity by having the authors maintain it, no doubt. Bu
 
 ### Challenges, downsides, and straight-up problems we faced
 
-Unfortunately, it turned out that microservices brought a lot more challenges and straight-up problems than benefits. I’m sure that a lot of more talented CTOs, more talented people, and better organized teams out there really love microservices and their microservices implementation, but it was not a perfect fit, not even a good fit, for us. 
+Unfortunately, it turned out that microservices brought a lot more challenges and straight-up problems than benefits. I’m sure that more talented CTOs, more talented people, and better organized teams out there really love microservices and their microservices implementation, but it was not a perfect fit, not even a good fit, for us. 
 
 #### Integrations tests  - LOL
 
@@ -120,7 +121,7 @@ It's a little difficult to explain, and if you don’t care about the technicali
 An API should be stable, and in most cases our API was stable. Since our API was not consumed by any external partners, it was sometimes easier to cut corners and alter them anyway.  
 Even if no APIs were altered, bugs were sometimes introduced, which didn’t get picked up by the test suite in the microservice itself, and therefore made their way into production. 
 
-Both cases resulted in other microservices that depended on the now faulty microservice starting to fail their test suites. Or Sentry would start picking up errors. Or our users would. The worst scenario was the last of course (our users suffering) but in all three scenarios it was too late; the bug was in production.
+Both cases resulted in other microservices that depended on now missing API endpoints or the now faulty microservice starting to fail their test suites. Or Sentry would start picking up errors. Or our users would. The worst scenario was the last of course (our users suffering) but in all three scenarios it was too late; the bug was in production.
 
 There are ways to fix this, I’m aware, but we just couldn’t find the time to implement that in our workflow, and we were already paying way too much for our CI runner. To mitigate this just a bit, we introduced nightly runs of the test suites of all our microservices. But that’s really like popping a painkiller or peeing in your pants to stay warm.
 
@@ -146,35 +147,35 @@ Working on a feature that involves only one microservice is easy (duh). Working 
 
 By nature, they all have their own databases, and some of them also have their own frontends. So, you would need to make sure the configuration for the JavaScript compiler was linked correctly and all the environment variables configured with all the right links between the microservices. And there could be multiple links between microservices, private and public.
 
-Too often you would end up being puzzled about why it would seem that something was off, even though things were working. This was almost always due to the fact that you missed one of these links and requests was either going nowhere or going to one of our shared development services (making it work, just not the way you would expect).
+Too often you would end up being puzzled about why it would seem that something was off, even though things were working. This was almost always due to the fact that you missed one of these links and requests was either going nowhere or going to one of our shared development services (making it work, just not the way you would expect it to).
 
 When you became more traversed in our setup, the occurrences of faults related to misconfiguration became rare, but it would still happen, and for new developers (even senior ones) it was a steep learning curve. 
 
 #### Maintaining boilerplate code
 
-When you have a monolith and maybe a few other services, doing scaffolding is not something you need to do often. When you are migrating from a monolith to microservices, and are trying to microservicefy everything, maintaining boilerplate code suddenly became a recurring task.
+When you have a monolith and maybe a few other services, doing scaffolding is not something you need to do often. When you are migrating from a monolith to microservices, and are trying to microservicefy everything, maintaining boilerplate code suddenly becomes a recurring task.
 
-Taranchenkos has a pretty good list of things you need to do every time you roll a new microservice, and that list is almost a carbon copy of our list. 
+Taranchenko has a pretty good list of things you need to do every time you roll a new microservice, and our list was almost a carbon copy of that list. 
 
 Working smarter, not harder, made us set up boilerplate repositories with prebuilt services we needed (Frontend, Symfony, Laravel). 
 
 ![Scaffolding repository](/images/blog/scaffolding.jpg)
 
-Very nice, except every time you rolled a new service, you had to update:
+Very nice, except every time you rolled a new service, you had to:
 
 - Get rid of the stuff you didn’t need in your service.
 - Update all dependencies to the latest versions.
-- Update all dependencies in the boilerplate itself, to decrease the chance that the next developer would need to update by roughly 1%.
+- Update all dependencies in the boilerplate itself, to decrease the chance by roughly 1% that the next developer would need to update the dependencies.
 
 Hard work.
 
 ### It was my decision, and I was wrong
 
-In the end it turned out that microservices only solved one half of our original problems (slow running tests) and only added one of the benefits (motivated developers). The other problems were either not solved, or just replaced by the same problems with a different flavor. And a lot of unexpected challenges and problems were brought to the table.
+In the end it turned out that microservices only solved one half of our original problems (slow running tests) and only added one of the benefits (motivated developers). The other problems were either not solved, or just replaced by the same problems with a different flavor. Adding to that, a lot of unexpected challenges and problems were also brought to the table.
 
-So yeah, I was wrong. If I were to go back, I would stop myself from making that decision. If anyone from TestaViva is reading this, please start the process of reverting now. 
+So yeah, I was wrong. If I were to go back, I would stop myself from making that decision. If anyone from TestaViva is reading this, I encourage you to start the process of reverting now. I defended my decision for a long time, and not because of pride, but because I really belived that we would harvest the benefits in the long run. But I see things in a different light now.
 
-At least I know now that my next product will be a monolith, and I’ll be happy about it, also when the next microservice hype train arrives in 10-20 years (because when you stick around long enough, you realize that everything is just a recursion).
+At least I know now that my next product will be a monolith, and I’ll be happy about it - also when the next microservice hype train arrives in 10-20 years (because when you stick around long enough, you realize that everything is just a recursion).
 
 ##### Post Scriptum: The slow running tests
 
@@ -193,7 +194,7 @@ Our test suite looked like this:
 
 And how did this happen? Again, ignorance. 
 
-In 2015 when the Polish team built our product, they asked me if it was okay for them to write Behat tests instead of PHPUnit tests. We argued back and forth, but in the end the winning argument was that they would move faster (and thereby cheaper) with Behat instead of PHPUnit. 
+In 2015 when the Polish team built our product, they asked me if it was okay for them to write Behat (end-to-end) tests instead of PHPUnit tests. We argued back and forth, but in the end the winning argument was that they would move faster (and thereby cheaper) with Behat instead of PHPUnit. 
 I was young(er) and inexperienced in software testing. Today I would never have allowed it, but instead bought them a software testing course.
 
 ### The end
