@@ -52,6 +52,11 @@ const { title, description, pubDate, updatedDate, image } = Astro.props;
 				font-style: italic;
 			}
 		</style>
+		<style is:global>
+			article div.prose p + ul {
+				margin-top: -1em;
+			}
+		  </style>
 	</head>
 
 	<body>
