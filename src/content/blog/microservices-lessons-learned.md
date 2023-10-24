@@ -142,7 +142,7 @@ Of course I did spend my time doing that, but too much time went into maintainin
 
 Working on a feature that involves only one microservice is easy (duh). Working with two is also alright. But when you need to balance 3+ microservices, things start getting messy. 
 
-![Configuration hell of microservices](/public/images/blog/microservices-configuration.jpg)
+![Configuration hell of microservices](/images/blog/microservices-configuration.jpg)
 
 By nature, they all have their own databases, and some of them also have their own frontends. So, you would need to make sure the configuration for the JavaScript compiler was linked correctly and all the environment variables configured with all the right links between the microservices. And there could be multiple links between microservices, private and public.
 
@@ -158,7 +158,7 @@ Taranchenkos has a pretty good list of things you need to do every time you roll
 
 Working smarter, not harder, made us set up boilerplate repositories with prebuilt services we needed (Frontend, Symfony, Laravel). 
 
-![Scaffolding repository](/public/images/blog/scaffolding.jpg)
+![Scaffolding repository](/images/blog/scaffolding.jpg)
 
 Very nice, except every time you rolled a new service, you had to update:
 
@@ -185,11 +185,11 @@ Turned out it wasn’t the monolith that was the cause of the problems, it was t
 
 A well-designed test suite looks like this:
 
-![The right testing pyramid](/public/images/blog/testing-pyramid.png)
+![The right testing pyramid](/images/blog/testing-pyramid.png)
 
 Our test suite looked like this:
 
-![Our testing pyramid](/public/images/blog/testaviva-pyramid.png)
+![Our testing pyramid](/images/blog/testaviva-pyramid.png)
 
 And how did this happen? Again, ignorance. 
 
