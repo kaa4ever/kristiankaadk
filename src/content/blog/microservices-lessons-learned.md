@@ -5,9 +5,9 @@ pubDate: 'Oct 22 2023'
 image: '/images/blog/microservices-leassons-learned.jpg'
 readingTime: '15 min'
 ---
-A few weeks back, I read Andrei Taranchenkos article _Death by a thousand microservices_ and Justin Etheredges’ _Gasp! You Might Not Need Microservices_, which are both excellent articles. I have been wanting to write this article for a while now, and after reading those two I decided it was finally time.
+A few weeks back, I read Andrei Taranchenkos article _Death by a thousand microservices_ and Justin Etheredges’ _Gasp! You Might Not Need Microservices_, which are both excellent articles. I have been wanting to write this article for a while now, and after reading those two I decided it was finally time, but I still doubted if the world really needed another microservice critical article. A few days ago, when reading something on Reddit, I stumbled on this guy arguing that they would soon migrate to microservices. I almost wrote a comment in CAPS, but it was off-topic, and hey - he might have a real reason to actually migrate. But it seems that the world still needs microservice critical articles.
 
-I was formerly the co-founder and CTO of TestaViva, where I made the decision to move from a monolith to microservices five years back. This article will be a set of practical pros and cons for choosing microservices, based on my experiences.
+I was formerly the co-founder and CTO of TestaViva, where I decided to move from a monolith to microservices five years back. This article will be a set of practical pros and cons for choosing microservices, based on my experiences.
 
 This article will discuss the following aspects:
 
@@ -170,14 +170,13 @@ Very nice, except every time you rolled a new service, you had to:
 Hard work.
 
 ### It was my decision, and I was wrong
+In the end, it turned out that microservices only solved one-half of our original problems (slow-running tests) and only added one of the benefits (motivated developers). The other problems were either not solved, or just replaced by the same problems with a different flavor. Adding to that, a lot of unexpected challenges and problems were also brought to the table.
 
-In the end it turned out that microservices only solved one half of our original problems (slow running tests) and only added one of the benefits (motivated developers). The other problems were either not solved, or just replaced by the same problems with a different flavor. Adding to that, a lot of unexpected challenges and problems were also brought to the table.
+So yeah, I was wrong. If I were to go back, I would stop myself from making that decision. I defended my decision for a long time, and not because of pride, but because I really believed that we would harvest the benefits in the long run, but I'm of another belief this day.
 
-So yeah, I was wrong. If I were to go back, I would stop myself from making that decision. If anyone from TestaViva is reading this, I encourage you to start the process of reverting now. I defended my decision for a long time, and not because of pride, but because I really belived that we would harvest the benefits in the long run. But I see things in a different light now.
+At least I know now that my next product will be a monorepo with a minimum of services, probably, hopefully, only a backend and a frontend services, and I’ll be happy about it - also when the next microservice hype train arrives in 10-20 years I'll make sure to not board it (when you stick around long enough, you realize that everything is just a recursion).
 
-At least I know now that my next product will be a monolith, and I’ll be happy about it - also when the next microservice hype train arrives in 10-20 years (because when you stick around long enough, you realize that everything is just a recursion).
-
-##### Post Scriptum: The slow running tests
+##### Post Scriptum: The slow-running tests
 
 At the time we started our migration to microservices, our test suite had a runtime of approximately 45 minutes. It was beginning to make our CI workflow more painful. 
 Since the CI workflow would need to run twice for a production build, correcting bugs would require at least two hours of waiting. That was really frustrating for both the business and the developers (me included).
